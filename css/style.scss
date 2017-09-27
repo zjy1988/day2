@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: .32rem;
+}
+html,body,.box{
+    width: 100%;
+    height: 100%;
+}
+%qjz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin pos($p:relative){
+    position: $p;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: .88rem;
+    background: #393A3F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    span{
+        color: #fff;
+        &:nth-child(1){
+            flex: 2;
+            text-align: center;
+        }
+        &:nth-child(2){
+            flex: 8;
+            font-size: .34rem;
+        }
+        &:nth-child(3){
+            flex: 2;
+            @extend %qjz;
+            transform: rotate3d(0,0,1,-90deg);
+            font-weight: bold;
+        }
+    }
+}
+section{
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+    @include pos;
+}
+.mark{
+    width: 100%;
+    height: 100%;
+    @include pos(absolute);
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.2);
+}
+.confirm{
+    width: 90%;
+    height: 70%;
+    @include pos(absolute);
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    h1{
+        width: 100%;
+        height: 1rem;
+        margin-top: .6rem;
+        margin-bottom: .15rem;
+        img{
+            width: 40%;
+            height: auto;
+        }
+    }
+    p{font-size: .35rem;}
+    .tel,.paw{
+        width: 85%;
+        height: 1rem;
+        border-bottom: 2px solid #D8D9D9;
+        line-height: 1rem;
+        margin: 1rem 7.5% .8rem 7.5%;
+        display: flex;
+        span{
+            width: 20%;
+            height: 100%;
+            @extend %qjz;
+            img{
+                width: 40%;
+                height: auto;
+            }
+        }
+        input{
+            width: 80%;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: .3rem;
+        }
+    } 
+    .login{
+        width: 85%;
+        margin: .3rem 7.5%;
+        height: .88rem;
+        background: #2FBA77;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+    }
+}

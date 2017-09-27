@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: .32rem; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%; }
+
+header span:nth-child(3), .confirm .tel span, .confirm .paw span {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.box {
+  display: flex;
+  flex-direction: column; }
+
+header {
+  width: 100%;
+  height: .88rem;
+  background: #393A3F;
+  color: #fff;
+  display: flex;
+  align-items: center; }
+  header span {
+    color: #fff; }
+    header span:nth-child(1) {
+      flex: 2;
+      text-align: center; }
+    header span:nth-child(2) {
+      flex: 8;
+      font-size: .34rem; }
+    header span:nth-child(3) {
+      flex: 2;
+      transform: rotate3d(0, 0, 1, -90deg);
+      font-weight: bold; }
+
+section {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  position: relative; }
+
+.mark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2); }
+
+.confirm {
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: #fff;
+  border-radius: 10px;
+  text-align: center; }
+  .confirm h1 {
+    width: 100%;
+    height: 1rem;
+    margin-top: .6rem;
+    margin-bottom: .15rem; }
+    .confirm h1 img {
+      width: 40%;
+      height: auto; }
+  .confirm p {
+    font-size: .35rem; }
+  .confirm .tel, .confirm .paw {
+    width: 85%;
+    height: 1rem;
+    border-bottom: 2px solid #D8D9D9;
+    line-height: 1rem;
+    margin: 1rem 7.5% .8rem 7.5%;
+    display: flex; }
+    .confirm .tel span, .confirm .paw span {
+      width: 20%;
+      height: 100%; }
+      .confirm .tel span img, .confirm .paw span img {
+        width: 40%;
+        height: auto; }
+    .confirm .tel input, .confirm .paw input {
+      width: 80%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: .3rem; }
+  .confirm .login {
+    width: 85%;
+    margin: .3rem 7.5%;
+    height: .88rem;
+    background: #2FBA77;
+    color: #fff;
+    border-radius: 5px;
+    border: none; }
+
+/*# sourceMappingURL=style.css.map */
